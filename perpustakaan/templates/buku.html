@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Perpustakaan</title>
+  </head>
+  <body>
+    <div>
+      {% block content %} {% endblock %}
+      <section>
+        <div>Ini Halaman Buku</div>
+
+        <ul>
+          {% for item in title %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        <div>judul : {{ title }}</div>
+        <div>Penulis : {{ writer }}</div>
+      </section>
+    </div>
+  </body>
+</html>

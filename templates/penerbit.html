@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<section>
+  <div>Ini Halaman Penerbit</div>
+
+  <ul>
+    {% for item in writer %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}
