@@ -17,13 +17,10 @@ from django.conf.urls import url
 from django.urls import path
 from django.contrib import admin
 
-from perpustakaan.views import buku, penerbit
-
-
-def meme(request):
-    return HttpResponse("meme")
+from perpustakaan.views import buku, penerbit, meme
 
 urlpatterns = [
+    path("",buku),
     url(r'^admin/', admin.site.urls),
     path("meme/",meme),
     path("buku/",buku),

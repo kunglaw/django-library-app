@@ -3,11 +3,9 @@
   <div>Ini Halaman Buku</div>
 
   <ul>
-    {% for item in title %}
-    <li>{{ item }}</li>
+    {% for book in books %}
+    <li>{{ book.title }}</li>
     {% endfor %}
   </ul>
-  <div>judul : {{ title }}</div>
-  <div>Penulis : {{ writer }}</div>
 </section>
 {% endblock %}

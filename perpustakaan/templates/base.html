@@ -1,23 +1,28 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Perpustakaan</title>
+    <link
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div>
-      <header>
-        <h1>Perpustakaan</h1>
-        <hr />
-
-        <a href="/buku/"> Buku </a>&nbsp;
-        <a href="/penerbit/"> Penerbit </a>
-        <hr />
-      </header>
-
-      {% block content %} {% endblock %}
+      {% include "header.html" %} {% block content %} {% endblock %}
     </div>
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
   </body>
 </html>
